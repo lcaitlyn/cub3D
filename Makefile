@@ -10,13 +10,14 @@ LIBFT			=	-L libft -l ft -I libft/inc/
 
 # src
 SRCS_DIR		=	src/
-SRCS			=	main.c
+SRCS			=	main.c win_close.c key_commands.c\
+				../gnl/get_next_line.c ../gnl/get_next_line_utils.c
 
 SRCS_OBJS		=	$(addprefix $(SRCS_DIR), $(SRCS:%.c=%.o))
 
 OBJ				=	$(SRCS_OBJS)
 
-CFLAGS			=	#-Wall -Wextra -Werror -Imlx #-g -fsanitize=address
+CFLAGS			=	-g -fsanitize=address -Imlx  #-Wall -Wextra -Werror 
 
 CC				=	gcc
 

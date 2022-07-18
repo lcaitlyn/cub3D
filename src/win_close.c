@@ -1,32 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cub3d.h                                            :+:      :+:    :+:   */
+/*   win_close.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lcaitlyn <lcaitlyn@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/12 13:54:24 by lcaitlyn          #+#    #+#             */
-/*   Updated: 2022/07/15 14:06:35 by lcaitlyn         ###   ########.fr       */
+/*   Created: 2022/07/15 13:52:31 by lcaitlyn          #+#    #+#             */
+/*   Updated: 2022/07/15 14:03:18 by lcaitlyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/inc/libft.h"
-#include "../mlx/mlx.h"
-#include "keys.h"
-#include "../gnl/get_next_line.h"
+#include "../include/cub3d.h"
 
-#include <stdio.h>
-#include <unistd.h>
-#include <fcntl.h>
-
-typedef struct s_vars
+int	win_close(t_vars *vars)
 {
-	void	*mlx;
-	void	*win;
-}	t_vars;
-
-// win_close.c
-int	win_close(t_vars *vars);
-
-// key_commands.c
-int key_commands(int key, t_vars *vars);
+	// mlx_destroy_image(vars->mlx, vars->img.img);
+	mlx_destroy_window(vars->mlx, vars->win);
+	exit (0);
+	return (0);
+}

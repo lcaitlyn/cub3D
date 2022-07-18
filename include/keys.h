@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cub3d.h                                            :+:      :+:    :+:   */
+/*   keys.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lcaitlyn <lcaitlyn@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/12 13:54:24 by lcaitlyn          #+#    #+#             */
-/*   Updated: 2022/07/15 14:06:35 by lcaitlyn         ###   ########.fr       */
+/*   Created: 2022/07/15 14:05:32 by lcaitlyn          #+#    #+#             */
+/*   Updated: 2022/07/15 14:05:34 by lcaitlyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/inc/libft.h"
-#include "../mlx/mlx.h"
-#include "keys.h"
-#include "../gnl/get_next_line.h"
+#ifndef KEYS_H
+# define KEYS_H
 
-#include <stdio.h>
-#include <unistd.h>
-#include <fcntl.h>
+# define MOUSE_SCROLL_UP	4
+# define MOUSE_SCROLL_DOWN	5
 
-typedef struct s_vars
-{
-	void	*mlx;
-	void	*win;
-}	t_vars;
+# define ARROW_UP			126
+# define ARROW_DOWN			125
+# define ARROW_LEFT			123
+# define ARROW_RIGHT		124
 
-// win_close.c
-int	win_close(t_vars *vars);
+# define NUM_PAD_PLUS		69
+# define NUM_PAD_MINUS		78
 
-// key_commands.c
-int key_commands(int key, t_vars *vars);
+# define KEY_ESC		53
+# define KEY_SPACE		49
+# define KEY_C			8
+# define KEY_H			4
+# define KEY_R			15
+# define KEY_PLUS		24
+# define KEY_MINUS		27
+
+#endif
