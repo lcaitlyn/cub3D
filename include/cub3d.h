@@ -6,7 +6,7 @@
 /*   By: lcaitlyn <lcaitlyn@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/12 13:54:24 by lcaitlyn          #+#    #+#             */
-/*   Updated: 2022/08/22 13:02:16 by lcaitlyn         ###   ########.fr       */
+/*   Updated: 2022/08/22 15:57:27 by lcaitlyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,9 @@
 # include <fcntl.h>
 # include <math.h>
 
-# define WIDTH 1320
-# define HEIGHT 800
+# define WIDTH				1320
+# define HEIGHT				800
+# define MINIMAP_PIXEL_LEN	15
 
 typedef struct s_data
 {
@@ -128,16 +129,23 @@ typedef struct s_vars
 void	ft_exit(char *err);
 
 // init_structs.c
+void	init_assets(t_vars *vars);
+void	init_ray(t_vars *vars);
 void	init_vars(t_vars *vars);
 
 // check_file.c
-int		check_file(char *file, t_vars *vars);
+int		check_walls(t_vars *vars, char *str);
 int		check_line(char *str);
+int		is_map_line(char *str);
+void	check_file_argv(int fd, t_vars *vars);
+void	check_file(char *file, t_vars *vars);
 
 // ft_split_len.c
 int		ft_split_len(char *arr[]);
 
 // map.c
+void	map_line_check(char *str);
+void	map_check(t_vars *vars);
 void	create_map(t_vars *vars, char *str, int fd);
 
 // map_checker.c
@@ -152,8 +160,10 @@ void	find_player_pos(t_vars *vars);
 
 // assets.c
 int		c(char *arg);
-void	connect_assets(t_vars *vars);
 void	check_assets(t_vars *vars);
+int		find_color(char *str);
+void	load_assest(t_vars *vars, t_data *img);
+void	connect_assets(t_vars *vars);
 
 // my_mlx_pixel_put.c
 void	my_mlx_pixel_put(t_data *data, int x, int y, int color);

@@ -6,7 +6,7 @@
 /*   By: lcaitlyn <lcaitlyn@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/19 19:41:10 by lcaitlyn          #+#    #+#             */
-/*   Updated: 2022/08/22 13:14:36 by lcaitlyn         ###   ########.fr       */
+/*   Updated: 2022/08/22 13:40:24 by lcaitlyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int	find_color(char *str)
 	return (256 * 256 * r + 256 * g + b);
 }
 
-void	load_assest(t_vars *vars, t_data *img, t_assets *assets)
+void	load_assest(t_vars *vars, t_data *img)
 {
 	int	img_width;
 	int	img_height;
@@ -74,9 +74,7 @@ void	load_assest(t_vars *vars, t_data *img, t_assets *assets)
 
 void	connect_assets(t_vars *vars)
 {
-	char	*str;
-
-	load_assest(vars, &vars->img, &vars->assets);
+	load_assest(vars, &vars->img);
 	if (!vars->img.north_wall || !vars->img.south_wall
 		|| !vars->img.east_wall || !vars->img.west_wall)
 		ft_exit("Error: wrong assets\n");

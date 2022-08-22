@@ -98,7 +98,7 @@ void	check_file_argv(int fd, t_vars *vars)
 	}
 }
 
-int	check_file(char *file, t_vars *vars)
+void	check_file(char *file, t_vars *vars)
 {
 	int	fd;
 

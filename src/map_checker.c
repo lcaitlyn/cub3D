@@ -6,7 +6,7 @@
 /*   By: lcaitlyn <lcaitlyn@student.21-school.ru    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/19 16:34:01 by lcaitlyn          #+#    #+#             */
-/*   Updated: 2022/08/22 12:56:42 by lcaitlyn         ###   ########.fr       */
+/*   Updated: 2022/08/22 15:57:40 by lcaitlyn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,11 +71,9 @@ void	check_we_ea_so_border(t_vars *vars, int *flag)
 
 void	border_zero_check(t_vars *vars)
 {
-	int	i;
 	int	j;
 	int	flag;
 
-	i = 0;
 	j = 0;
 	flag = 0;
 	while (vars->map[0][j])
