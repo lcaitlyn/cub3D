@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: gopal <gopal@student.42.fr>                +#+  +:+       +#+         #
+#    By: lcaitlyn <lcaitlyn@student.21-school.ru    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/09 00:12:58 by gopal             #+#    #+#              #
-#    Updated: 2022/06/16 03:13:15 by gopal            ###   ########.fr        #
+#    Updated: 2022/08/19 16:14:35 by lcaitlyn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ SRCS		=	ft_isalpha.c	ft_isdigit.c	ft_isalnum.c	\
 				ft_substr.c		ft_strjoin.c ft_putchar_fd.c	\
 				ft_putstr_fd.c	ft_putendl_fd.c	ft_putnbr_fd.c	\
 				ft_strtrim.c	ft_split.c		ft_itoa.c		\
-				ft_strmapi.c	ft_striteri.c	
+				ft_strmapi.c	ft_striteri.c	ft_strjoin_f.c	\
 
 SRCS_B		= 	ft_lstnew.c		ft_lstadd_front.c	ft_lstsize.c	\
 				ft_lstlast.c	ft_lstadd_back.c	ft_lstdelone.c	\

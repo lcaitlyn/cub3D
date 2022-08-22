@@ -10,14 +10,18 @@ LIBFT			=	-L libft -l ft -I libft/inc/
 
 # src
 SRCS_DIR		=	src/
-SRCS			=	main.c win_close.c key_commands.c\
+SRCS			=	main.c ft_exit.c init_structs.c				\
+					check_file.c ft_split_len.c map.c			\
+					map_checker.c player_checker.c assets.c		\
+					commands.c render.c raycaster.c				\
+					my_mlx_pixel_put.c movements.c rotation.c	\
 				../gnl/get_next_line.c ../gnl/get_next_line_utils.c
 
 SRCS_OBJS		=	$(addprefix $(SRCS_DIR), $(SRCS:%.c=%.o))
 
 OBJ				=	$(SRCS_OBJS)
 
-CFLAGS			=	-g -fsanitize=address -Imlx  #-Wall -Wextra -Werror 
+CFLAGS			=	-g -Imlx #-fsanitize=address  #-Wall -Wextra -Werror 
 
 CC				=	gcc
 
